@@ -1,0 +1,5 @@
+(library
+ (name ast)
+ (public_name protc.ast)
+ (modules ast))
+
