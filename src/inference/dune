@@ -1,0 +1,6 @@
+(library
+  (name inference)
+  (public_name protc.inference)
+  (libraries protc.ast)
+  (modules inference))
+

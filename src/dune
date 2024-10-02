@@ -1,0 +1,4 @@
+(executable 
+  (name main)
+  (public_name protc)
+  (libraries protc.ast protc.parser protc.lexer protc.inference))

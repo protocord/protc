@@ -1,0 +1,8 @@
+(ocamllex lexer)
+
+(library
+ (name lexer)
+ (public_name protc.lexer)
+ (modules lexer)
+ (libraries protc.parser))
+

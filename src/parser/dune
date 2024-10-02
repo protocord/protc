@@ -1,0 +1,9 @@
+(menhir
+ (modules parser)
+ (flags --explain))
+
+(library
+ (name parser)
+ (public_name protc.parser)
+ (modules parser)
+ (libraries protc.ast))
