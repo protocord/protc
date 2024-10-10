@@ -1,2 +1,2 @@
-type expr = Var of string
-type program = expr list
+type root = expr list 
+and expr = Var of string
