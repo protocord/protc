@@ -1,2 +1,2 @@
-type program = expr list (* Определение типа program *)
-and expr = Var of string (* Пример выражения с переменной *)
+type root = expr list
+and expr = Var of string
