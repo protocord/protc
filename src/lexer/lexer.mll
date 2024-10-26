@@ -2,6 +2,14 @@
   open Parser
 }
 
+(* Constants *)
+
+let upper = ['A'-'Z']
+let lower = ['a'-'z']
+let alpha = ['A'-'Z' 'a'-'z']
+
+(* Parsing *)
+
 rule tokenize = parse
 
   (* Common keywords *)
@@ -12,24 +20,27 @@ rule tokenize = parse
 
   (* Logic keywords *)
 
-  | "or" { OR }
+  | "not" { NOT }
   | "and" { AND }
+  | "or" { OR }
   | "is" { IS }
 
   (* Special symbols *)
 
+  | "." { DOT }
   | "{" { LBR }
   | "}" { RBR }
   | ":" { COL }
   | "," { COM }
   | "(" { LPA }
   | ")" { RPA }
-  | "=" { EQ }
+  | "=" { EQL }
   | eof { EOF }
 
   (* Identifier *)
 
-  | ['a'-'z' 'A'-'Z']+ as id { ID id }
+  | upper alpha* as uid { UID uid }
+  | lower alpha* as lid { LID lid }
  
   (* Indent *)
 
